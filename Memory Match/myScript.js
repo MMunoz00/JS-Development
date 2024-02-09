@@ -14,7 +14,7 @@ document.querySelector(".score").textContent = score;
 //         generateCards();
 //     });
 
-for (let index = 1; index <= 8; index++) {
+for (let index = 1; index <= 9; index++) {
 
     cards.push({"name": index, "image": "images/cardicons/icon" + index + ".png"});
     cards.push({"name": index, "image": "images/cardicons/icon" + index + ".png"});
@@ -69,17 +69,26 @@ function flipCard() {
     }
 
     secondCard = this;
-    score++;
-    document.querySelector(".score").textContent = score;
+    
     lockBoard = true;
-
+    
     checkMatch();
 }
 
 function checkMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-    isMatch ? disableCards() : unflipCards();
+    if (isMatch) {
+        disableCards();
+        score+=10;
+        document.querySelector(".score").textContent = score;
+    }
+    
+    else {
+        unflipCards();
+        score-=1;
+        document.querySelector(".score").textContent = score;
+    }
 }
 
 function disableCards() {
