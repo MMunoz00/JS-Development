@@ -4,7 +4,7 @@ This program is a simple point and click memory matching card game that runs in 
 
 I created this program to practice and learn the JavaScript langauge to further my own personal goals of learning JavaScript and being able to implement it into my own personal projects.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/8JpJqW1CzKI)
 
 # Development Environment
 
